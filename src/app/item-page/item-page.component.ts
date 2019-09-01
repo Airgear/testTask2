@@ -17,7 +17,7 @@ export class ItemPageComponent implements OnInit {
 
 
     this.item= this.itemService.getItems(
-      
+  
       +this.route.snapshot.params['id']
    
     )
