@@ -1,3 +1,44 @@
 <div>
-    {{ item.id }}
+    <h2>{{ item.name }}</h2>
+    <div class="productinfo">
+        <div class="desc">
+            <div>
+                <img src="{{ item.url }}" alt="" width="400" height="250">
+            </div>
+            <div>
+                <p>
+                    {{ item.description }}
+                </p>
+            </div>
+        </div>
+        <div class="desc-details">
+            <div class="h3">
+                <h2>Характеристики</h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Ширина:</td>
+                            <td>{{ item.width }}</td>
+                        </tr>
+                        <tr>
+                            <td>Глубина:</td>
+                            <td>{{ item.depth }}</td>
+                        </tr>
+                        <tr>
+                            <td>Высота:</td>
+                            <td>{{ item.headheight }}</td>
+                        </tr>
+                        <tr>
+                            <td>Материал:</td>
+                            <td>{{ item.thesize }}</td>
+                        </tr>
+                        <tr>
+                            <td>Цвет:</td>
+                            <td>{{ item.style }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>

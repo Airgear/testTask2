@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -21,7 +22,6 @@ import { ItemService } from './shared/item.service';
 import { AppComponent } from './app.component';
 import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import { ItemPageComponent } from './item-page/item-page.component';
-import { UserSinginComponent } from './user-singin/user-singin.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { appRoutes } from '../routes';
 
@@ -32,7 +32,6 @@ import { appRoutes } from '../routes';
     AppComponent,
     CatalogPageComponent,
     ItemPageComponent,
-    UserSinginComponent,
     HomePageComponent
   ],
   imports: [
@@ -52,6 +51,7 @@ import { appRoutes } from '../routes';
     MatSidenavModule,
     FlexLayoutModule,
     MatCardModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
 
   ],
@@ -61,3 +61,7 @@ import { appRoutes } from '../routes';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+
+

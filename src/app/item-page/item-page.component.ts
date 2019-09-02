@@ -9,19 +9,20 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ItemPageComponent implements OnInit {
 
-  item: any 
+  item:any; 
 
   constructor( private itemService: ItemService, private route: ActivatedRoute) {}
 
   ngOnInit() {
 
 
-    this.item= this.itemService.getItems(
+    this.item= this.itemService.getItem(
   
       +this.route.snapshot.params['id']
+      
    
     )
-
+    console.log(this.item);
   }
 
 }

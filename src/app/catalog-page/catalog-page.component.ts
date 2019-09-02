@@ -1,4 +1,4 @@
-import { Component, OnChanges, Input} from '@angular/core';
+import { Component,OnInit, Input} from '@angular/core';
 import {ItemService} from '../shared/item.service';
 
 
@@ -7,8 +7,8 @@ import {ItemService} from '../shared/item.service';
   templateUrl: './catalog-page.component.html',
   styleUrls: ['./catalog-page.component.css']
 })
-export class CatalogPageComponent implements OnChanges {
-  @Input() filterBy?: string ='all'
+export class CatalogPageComponent implements OnInit {
+  
   visibleItem:any[] = [];
  
   constructor(private itemService: ItemService) { 
@@ -17,8 +17,8 @@ export class CatalogPageComponent implements OnChanges {
       console.log(this.visibleItem);
 
     }
+    ngOnInit(){
 
-    ngOnChanges(){
-      this.visibleItem = this.itemService.getItems()
     }
+
 }

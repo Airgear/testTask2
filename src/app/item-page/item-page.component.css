@@ -1,0 +1,35 @@
+table {
+    font-size: medium;
+    font-style: normal;
+    text-align: start;
+    float: right;
+    width: 80%;
+}
+
+.description {
+    float: left;
+    width: 50%;
+}
+
+.productinfo {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.desc {
+    width: 70%;
+}
+
+.desc-details {
+    width: 30%;
+    font-size: 20px;
+    float: right;
+}
+
+div p {
+    font-size: 20px;
+}
+
+td {
+    font-size: 20px;
+}

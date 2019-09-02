@@ -1,4 +1,4 @@
-import { Routes, RouterModule} from "@angular/router";
+import { Routes} from "@angular/router";
 import { HomePageComponent } from './app/home-page/home-page.component';
 import { CatalogPageComponent } from './app/catalog-page/catalog-page.component';
 import {  ItemPageComponent } from './app/item-page/item-page.component';

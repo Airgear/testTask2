@@ -29,4 +29,14 @@ button {
     font-size: 200%;
     text-align: center;
     overflow-x: hidden;
+    flex-basis: 1 1 auto;
+}
+
+.row-height {
+    height: 100%
+}
+
+.mat-raised-button {
+    float: left;
+    margin-left: 8%;
 }
