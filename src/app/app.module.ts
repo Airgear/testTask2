@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -24,41 +24,45 @@ import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import { ItemPageComponent } from './item-page/item-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { appRoutes } from '../routes';
+import { LoginComponent } from './login/login.component';
 
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CatalogPageComponent,
-    ItemPageComponent,
-    HomePageComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    MatGridListModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatIconModule,
-    MatTableModule,
-    MatSidenavModule,
-    FlexLayoutModule,
-    MatCardModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
-
-  ],
-  providers: [
-    ItemService
-  ],
-  bootstrap: [AppComponent]
+   declarations: [
+      AppComponent,
+      CatalogPageComponent,
+      ItemPageComponent,
+      HomePageComponent,
+      LoginComponent
+   ],
+   imports: [
+      BrowserModule,
+      AppRoutingModule,
+      BrowserAnimationsModule,
+      MatButtonModule,
+      MatCheckboxModule,
+      MatGridListModule,
+      MatToolbarModule,
+      MatFormFieldModule,
+      MatSelectModule,
+      MatInputModule,
+      MatPaginatorModule,
+      MatIconModule,
+      MatTableModule,
+      MatSidenavModule,
+      FlexLayoutModule,
+      MatCardModule,
+      FormsModule,
+      ReactiveFormsModule,
+      RouterModule.forRoot(appRoutes)
+   ],
+   providers: [
+      ItemService
+   ],
+   bootstrap: [
+      AppComponent
+   ]
 })
 export class AppModule { }
 
