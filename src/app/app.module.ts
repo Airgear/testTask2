@@ -17,6 +17,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterModule } from '@angular/router';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 import { ItemService } from './shared/item.service';
 import { AppComponent } from './app.component';
@@ -54,6 +55,7 @@ import { LoginComponent } from './login/login.component';
       FlexLayoutModule,
       MatCardModule,
       FormsModule,
+      NgImageSliderModule,
       ReactiveFormsModule,
       RouterModule.forRoot(appRoutes)
    ],

@@ -9,19 +9,76 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ItemPageComponent implements OnInit {
 
-  item:any; 
+  item: any;
 
   constructor( private itemService: ItemService, private route: ActivatedRoute) {}
+  imageObject = [{
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  },{
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  },{
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }, {
+    image: 'assets/img/slider/1.jpg',
+    thumbImage: 'assets/img/slider/1_min.jpeg',
+    alt: 'alt of image',
+    title: 'title of image'
+  }];
 
   ngOnInit() {
-
-
-    this.item= this.itemService.getItem(
-  
-      +this.route.snapshot.params['id']
-      
-   
-    )
+    this.item = this.itemService.getItem(+this.route.snapshot.params['id']);
+    this.imageObject.forEach(element => {
+      element.image = element.thumbImage = this.item.url;
+    });
     console.log(this.item);
   }
 
