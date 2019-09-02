@@ -11,14 +11,16 @@
         <span class="example-spacer"></span>
         <div fxShow="true" fxHide.lt-md="true">
             <a mat-button routerLink="/catalog">Каталог</a>
-            <a mat-button routerLink="/singin">Вход</a>
+            <a mat-button *ngIf="!localStorage.getItem('activeSession')" routerLink="/login">Вход</a>
+            <a mat-button *ngIf="localStorage.getItem('activeSession')" (click)='localStorage.clear(); window.reload();'>Выход</a>
         </div>
     </mat-toolbar>
     <mat-sidenav-container fxFlexFill class="example-container">
         <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
             <div fxLayout="column">
                 <a mat-button routerLink="/catalog">Каталог</a>
-                <a mat-button routerLink="/singin">Вход</a>
+                <a mat-button *ngIf="!localStorage.getItem('activeSession')" routerLink="/login">Вход</a>
+                <a mat-button *ngIf="localStorage.getItem('activeSession')" (click)='localStorage.clear(); window.reload();'>Выход</a>
             </div>
         </mat-sidenav>
 

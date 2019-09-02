@@ -78,6 +78,7 @@ export class ItemPageComponent implements OnInit {
     this.item = this.itemService.getItem(+this.route.snapshot.params['id']);
     this.imageObject.forEach(element => {
       element.image = element.thumbImage = this.item.url;
+      element.title = this.item.name;
     });
     console.log(this.item);
   }

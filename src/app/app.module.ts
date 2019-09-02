@@ -26,7 +26,7 @@ import { ItemPageComponent } from './item-page/item-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { appRoutes } from '../routes';
 import { LoginComponent } from './login/login.component';
-
+import { AuthGuard } from '../app/auth/auth.guard';
 
 
 @NgModule({
@@ -60,7 +60,9 @@ import { LoginComponent } from './login/login.component';
       RouterModule.forRoot(appRoutes)
    ],
    providers: [
-      ItemService
+      ItemService,
+      AuthGuard
+
    ],
    bootstrap: [
       AppComponent
